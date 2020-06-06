@@ -1,5 +1,5 @@
 # Interpolation-Histogram Processing
  
- ##Written in MATLAB
+ ## Written in MATLAB
  
- ##Further detail is in Report.
+ ## Further detail is in Report.
