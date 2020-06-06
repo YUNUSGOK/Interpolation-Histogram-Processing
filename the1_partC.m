@@ -1,0 +1,27 @@
+img = imread('C1.jpg');
+s = size(img);
+v =[-1,0,1;
+    -2,0,2;
+    -1,0,1];
+h = [1,2,1;
+    0,0,0;
+    -1,-1,-1];
+rd =    [2,-1,-1;
+        -1,2,-1;
+        -1,-1,2];
+ld = [-1,-1,2;
+       -1,2,-1;
+        2,-1,-1];
+    
+ga = [1,2,1;
+    2,4,2;
+    1,2,1;
+    ]/16;
+res1 = the1_convolution(img,rd);
+res2 = the1_convolution(img,v);
+res3 = the1_convolution(img,h);
+res4 = the1_convolution(img,ld);
+blur = the1_convolution(img,ga);
+res = res1+res2+res3+res4+blur;
+res = normalize(res,'range');
+imshow(res2);
